@@ -4,7 +4,7 @@ class Solution(object):
             k=[]
             for i in range(len(first)):
                 for j in range (len(second)):
-                    if first[i]+firsttime[i]>=second[j]:
+                    if first[i]+firsttime[i]>second[j]:
                         c=first[i]+firsttime[i]+secondtime[j]
                     else:
                         c=second[j]+secondtime[j]
