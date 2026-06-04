@@ -1,5 +1,7 @@
 class Solution(object):
     def missingNumber(self, nums):
-        for i in xrange(len(nums)+1):
-            if nums.count(i)==0:
-                return i
+        a=len(nums)
+        for i in xrange(a):
+            a^=i^nums[i]
+        return a
+            
