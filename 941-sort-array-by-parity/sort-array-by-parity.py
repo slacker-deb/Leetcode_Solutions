@@ -1,11 +1,12 @@
 class Solution(object):
     def sortArrayByParity(self, nums):
-        l=[]
-        k=nums[:]
+        e=[]
+        o=[]
         for i in nums:
             if i%2==0:
-                l.append(i)
-                k.remove(i)
-        return l+k
+                e.append(i)
+            else:
+                o.append(i)
+        return e+o
 
         
