@@ -1,7 +1,5 @@
-class Solution(object):
+class Solution:
     def findTheDifference(self, s, t):
-        l=list(t)
-        for i in s:
-            l.remove(i)
-        return l[0]
-        
+        for i in t:
+            if t.count(i) != s.count(i):
+                return i
