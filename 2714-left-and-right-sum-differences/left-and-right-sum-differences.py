@@ -3,7 +3,7 @@ class Solution(object):
         l = 0
         t = sum(nums)
         a = []
-        for i in range(len(nums)):
+        for i in xrange(len(nums)):
             r = t- l-nums[i]
             a.append(abs(l - r))
             l+=nums[i]
