@@ -1,9 +1,14 @@
 class Solution(object):
     def countPairs(self, nums, target):
-        s=0
-        for i in xrange(len(nums)):
-            for j in xrange(i+1,len(nums)):
-                if nums[i]+nums[j]<target:
-                    s=s+1
-        return s
+        nums.sort()
+        l,r,c=0,len(nums)-1,0
+        while l<r:
+            t=nums[l]+nums[r]
+            if t<target:
+                c+=(r-l)
+                l+=1
+            else:
+                r-=1
+        return c
+
         
