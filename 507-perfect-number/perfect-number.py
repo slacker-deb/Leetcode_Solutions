@@ -1,0 +1,12 @@
+class Solution:
+    def checkPerfectNumber(self, num: int) -> bool:
+        if num<2:
+            return False
+        t=1
+        for i in range(2,int(num**0.5)+1):
+            if num%i==0:
+                t+=i
+                if i**2!=num:
+                    t+=num//i
+        return t==num
+        
